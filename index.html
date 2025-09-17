@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VocabGeoMaster</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fas fa-globe-americas"></i>
+                <span>VocabGeoMaster</span>
+            </div>
+            <div class="stats">
+                <div class="stat-box">
+                    <i class="fas fa-coins"></i>
+                    <span id="points">0</span>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-user"></i>
+                    <span id="level">Level 1</span>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-trophy"></i>
+                    <span id="streak">0</span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="screen welcome-screen active">
+            <h1>Welcome to VocabGeoMaster!</h1>
+            <p>Test your vocabulary and geography knowledge in this fun, gamified quiz experience. Earn points, unlock achievements, and climb the leaderboard!</p>
+            
+            <div class="quiz-selection">
+                <div class="quiz-option" data-type="vocabulary">
+                    <i class="fas fa-book"></i>
+                    <h3>Vocabulary Quiz</h3>
+                    <p>Test your word knowledge and language skills</p>
+                </div>
+                <div class="quiz-option" data-type="geography">
+                    <i class="fas fa-globe"></i>
+                    <h3>Geography Quiz</h3>
+                    <p>Explore countries, capitals, and landmarks</p>
+                </div>
+            </div>
+            
+            <button class="btn" id="start-btn">Start Quiz</button>
+        </div>
+        
+        <div class="screen quiz-screen">
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            
+            <h2 class="question" id="question">What is the capital of France?</h2>
+            
+            <div class="options" id="options">
+                <div class="option">Paris</div>
+                <div class="option">London</div>
+                <div class="option">Berlin</div>
+                <div class="option">Madrid</div>
+            </div>
+            
+            <div class="feedback" id="feedback"></div>
+            
+            <div style="text-align: center;">
+                <button class="btn" id="next-btn">Next Question</button>
+            </div>
+        </div>
+        
+        <div class="screen results-screen">
+            <h2>Quiz Completed!</h2>
+            <p>You've finished the quiz. Here's how you did:</p>
+            
+            <div class="score" id="final-score">0</div>
+            
+            <h3>Achievements Unlocked</h3>
+            <div class="achievements">
+                <div class="achievement">
+                    <i class="fas fa-medal"></i>
+                    <p>First Try</p>
+                </div>
+                <div class="achievement">
+                    <i class="fas fa-bolt"></i>
+                    <p>Speed Run</p>
+                </div>
+            </div>
+            
+            <div class="leaderboard">
+                <h3>Leaderboard</h3>
+                <div class="leaderboard-item">
+                    <span>1. QuizMaster2000</span>
+                    <span>950 pts</span>
+                </div>
+                <div class="leaderboard-item">
+                    <span>2. GeoExplorer</span>
+                    <span>870 pts</span>
+                </div>
+                <div class="leaderboard-item">
+                    <span>3. WordWizard</span>
+                    <span>780 pts</span>
+                </div>
+                <div class="leaderboard-item">
+                    <span>4. You</span>
+                    <span id="user-score">0 pts</span>
+                </div>
+            </div>
+            
+            <button class="btn" id="restart-btn">Play Again</button>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
